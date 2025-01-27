@@ -19,6 +19,27 @@ app.get('/coffee/random', function(req, resp){
   resp.send(coffee)
 })
 
+app.get('/coffee/all', function(req, resp){
+  resp.send(coffees)
+
+}
+)
+
+app.get('/coffee/search', function(req, resp){
+  let search_term = req.query.search_term
+  console.log("search_term is ", search_term)
+  let search_results = []
+  for(let coffee of coffees){
+    if(coffee.includes(search_term)){
+      search_results.push(coffee)
+    }
+  }
+
+  resp.send(search_results)
+
+}
+)
+
 app.get('/random/:max', function(req, resp){
     let max = parseInt(req.params.max)
     let rand = Math.floor(Math.random()*max) +1
