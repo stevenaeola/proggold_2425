@@ -1,8 +1,22 @@
 const express = require('express')
 const app = express()
 
+let coffees = [
+"americano",
+"latte",
+"espresso",
+"flat white",
+"cappuccino"
+]
+
 app.get('/', function(req, resp){
   resp.send('Hello world')
+})
+
+app.get('/coffee/random', function(req, resp){
+  let coffee_number = Math.floor(Math.random()*coffees.length)
+  let coffee = coffees[coffee_number]
+  resp.send(coffee)
 })
 
 app.get('/random/:max', function(req, resp){
