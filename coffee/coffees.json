@@ -1,7 +1,9 @@
 [
-"americano",
-"latte",
-"espresso",
-"flat white",
-"cappuccino"
+    {"name":"filtered coffee" ,"strength": 2,"groundSize":8},
+    {"name": "americano",
+    "strength": 4},
+    {"name": "latte"},
+    {"name": "espresso", "brewing_method": "Pressure-brewed", "taste": "Strong, rich, intense", "serving_size": "1 oz (30 ml)", "caffeine_content": "High" },
+    {"name": "flat white"},
+    {"name": "cappuccino"}
 ]

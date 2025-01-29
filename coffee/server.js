@@ -10,7 +10,7 @@ app.get('/', function(req, resp){
 app.get('/coffee/random', function(req, resp){
   let coffee_number = Math.floor(Math.random()*coffees.length)
   let coffee = coffees[coffee_number]
-  resp.send(coffee)
+  resp.send(coffee.name)
 })
 
 app.get('/coffee/all', function(req, resp){
@@ -23,7 +23,7 @@ app.get('/coffee/search', function(req, resp){
   console.log("search_term is ", search_term)
   let search_results = []
   for(let coffee of coffees){
-    if(coffee.includes(search_term)){
+    if(coffee.name.includes(search_term)){
       search_results.push(coffee)
     }
   }
@@ -33,11 +33,17 @@ app.get('/coffee/search', function(req, resp){
 }
 )
 
-app.get('/random/:max', function(req, resp){
-    let max = parseInt(req.params.max)
-    let rand = Math.floor(Math.random()*max) +1
-    console.log('Max via url is ' + max + ' rand is ' + rand)
-    resp.send('' + rand)
+app.get('/coffee/details/:coffee_type', function(req, resp){
+    let type = req.params.coffee_type
+    console.log("details for coffee type " + type)
+    for(let coffee of coffees){
+      console.log("comparing with " + coffee.name)
+      if(coffee.name== type){
+        console.log("found")
+        resp.send(coffee)
+      }
+    }
+    resp.send("That's all")
   })
 
 
