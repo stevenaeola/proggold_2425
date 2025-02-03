@@ -1,5 +1,6 @@
 ## COMP1111 Programming (Gold) Term 2 Formative Assignment
 
+---
 
 ## Term 2 Formative Exercise Outline
 
@@ -8,6 +9,7 @@
 - Engagement with the formative (i.e. effort made, submitted on time) will be worth 10% of the module mark
 - Summative submission of code and video by 14:00 30 March 2025
 
+---
 
 ## Task summary
 
@@ -15,6 +17,7 @@
 - Create an outline static HTML page showing how it will look, but without any functionality
 - Identify the entities and associated GET and POST methods that you will be writing for the summative assignment
 
+---
 
 ### Dynamic web site
 
@@ -28,6 +31,7 @@
 - If you are not sure then ask me
 - Writing the dynamic site in nodejs will be the summative assignment
 
+---
 
 ### Design a REST API
 
@@ -40,6 +44,7 @@ At least one entity type will have identified
 
 - POST method to add new entity
 
+---
 
 ## Submission
 
@@ -53,6 +58,7 @@ Maximum 400 words
 
 Separate single HTML page (with related CSS) with a draft non-functional design
 
+---
 
 ## Engagement Criteria
 
