@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+app.use(express.static('client'))
+
 let coffees = require("./coffees.json")
 
 app.get('/', function(req, resp){
