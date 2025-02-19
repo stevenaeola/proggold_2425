@@ -187,7 +187,30 @@
         <ul id="search_results"></ul>
        </div>
 
-       <!-- bootsrtap form example https://getbootstrap.com/docs/4.3/components/forms/
+       <h1>Add new coffee</h1>
+
+       <div id="add_form_goes_here">
+        <form id='add_form'>
+
+            <div class="form-group">
+              <label for="coffee_name">Coffee name</label>
+              <input class="form-control" id="coffee_name" name="name" aria-describedby="coffee name" placeholder="Enter unique coffee name">
+            </div>
+            <div class="form-group">
+              <label for="coffee_taste">Taste</label>
+              <input class="form-control" id="coffee_taste" name="taste" aria-describedby="coffee taste" placeholder="Enter coffee taste e.g. bitter, spicy">
+            </div>
+            <div class="form-group">
+              <label for="coffee_strength">Strength</label>
+              <input class="form-control" id="coffee_strength" name="stength" aria-describedby="coffee strength" placeholder="Enter coffee strength 1:weak - 5:strong">
+            </div>
+
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+        <ul id="search_results"></ul>
+       </div>
+       <!-- bootstrap form example https://getbootstrap.com/docs/4.3/components/forms/
        <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
