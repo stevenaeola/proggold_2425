@@ -1,9 +1,13 @@
 const express = require('express')
 const app = express()
 
-app.use(express.static('client'))
+const COFFEE_JSON = "./coffees.json"
+const fs = require('fs');
 
-let coffees = require("./coffees.json")
+app.use(express.static('client'))
+app.use(express.json())
+
+let coffees = require(COFFEE_JSON)
 
 app.get('/', function(req, resp){
   resp.send('Hello world')
@@ -47,6 +51,16 @@ app.get('/coffee/details/:coffee_type', function(req, resp){
     }
     resp.send("That's all")
   })
+
+app.post("/coffee/add", function(req, res){
+  console.log("received add request", req.body)
+  let coffee = req.body
+  coffees.push(coffee)
+  let data = JSON.stringify(coffees)
+  fs.writeFileSync(COFFEE_JSON, data);
+  res.sendStatus(200)
+})
+
 
 
 app.listen(8090)
