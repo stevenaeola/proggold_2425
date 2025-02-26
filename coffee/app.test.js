@@ -1,16 +1,16 @@
 const request = require('supertest');
 const app = require('./app');
 
-describe('Test the things service', () => {
-    test('GET /thing/list succeeds', () => {
+describe('Test the coffee service', () => {
+    test('GET /coffee/all', () => {
         return request(app)
-	    .get('/thing/list')
+	    .get('/coffee/all')
 	    .expect(200);
     });
 
-    test('GET /thing/list returns JSON', () => {
+    test('GET /coffee/all returns JSON', () => {
         return request(app)
-	    .get('/thing/list')
+	    .get('/coffee/all')
 	    .expect('Content-type', /json/);
     });
 
