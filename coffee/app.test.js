@@ -14,35 +14,33 @@ describe('Test the coffee service', () => {
 	    .expect('Content-type', /json/);
     });
 
-    test('GET /thing/list includes red hair', () => {
+    test('GET /index.html returns HTML', () => {
         return request(app)
-	    .get('/thing/list')
-	    .expect(/red hair/);
+	    .get('/index.html')
+	    .expect('Content-type', /html/);
     });
 
-    test('GET /thing/1 succeeds', () => {
+    test('GET /coffee/all includes americano', () => {
         return request(app)
-	    .get('/thing/1')
-	    .expect(200);
+	    .get('/coffee/all')
+	    .expect(/americano/);
     });
 
-    test('GET /thing/1 returns JSON', () => {
-        return request(app)
-	    .get('/thing/1')
-	    .expect('Content-type', /json/);
-    });
 
-    test('GET /thing/1 includes 40', () => {
-        return request(app)
-	    .get('/thing/1')
-	    .expect(/40/);
-    });
 
-    test('POST /thing/add succeeds', () => {
-        const params = {'newthing': 'TechUp'};
+    test('POST coffee/add succeeds', () => {
+        const params = {"name": "testy_coffee", "taste": "Very testy", "strength": -2};
         return request(app)
-        .post('/thing/add')
+        .post('/coffee/add')
         .send(params)
 	    .expect(200);
+    });
+
+    test('POST coffee/add fails with a space in the name', () => {
+        const params = {"name": "bad name", "taste": "horrible", "strength": -2};
+        return request(app)
+        .post('/coffee/add')
+        .send(params)
+	    .expect(400);
     });
 });

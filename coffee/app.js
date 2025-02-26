@@ -56,6 +56,10 @@ app.get('/coffee/details/:coffee_type', function(req, resp){
 app.post("/coffee/add", function(req, res){
   console.log("received add request", req.body)
   let coffee = req.body
+  if(coffee.name.includes(" ")){
+    res.sendStatus(400);
+    return;
+  }
   coffees.push(coffee)
   let data = JSON.stringify(coffees)
   fs.writeFileSync(COFFEE_JSON, data);
