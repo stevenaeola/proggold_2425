@@ -3,7 +3,7 @@
 
 ## Term 2 Programming Exercise Outline
 
-- Submission of code video by 14:00 31 March 2025
+- Submission of code video by 14:00 1 April 2025
 - Return by 9 May 2025
 - Contributes 60% to module marks
 - This is an individual piece of work
