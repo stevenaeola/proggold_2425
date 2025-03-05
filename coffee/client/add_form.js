@@ -17,6 +17,7 @@ add_form.addEventListener('submit',  async function(event){
                 });
             const body = JSON.parse(await response.text());
             alert(body.msg)
+            add_form.reset()
         }
     catch(e){
         alert(e)
