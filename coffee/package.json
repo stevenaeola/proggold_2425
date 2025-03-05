@@ -4,7 +4,7 @@
   "description": "Coffee we love the smell and it keeps us awake in time of need",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --collect-coverage",
     "start": "nodemon server.js"
   },
   "author": "s.p.bradley@durham.ac.uk",
