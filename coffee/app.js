@@ -63,7 +63,8 @@ app.post("/coffee/add", function(req, res){
   coffees.push(coffee)
   let data = JSON.stringify(coffees)
   fs.writeFileSync(COFFEE_JSON, data);
-  res.sendStatus(200)
+  let message = {"msg": `Successfully added ${coffee.name}`}
+  res.status(200).send(message)
 })
 
 module.exports = app;
