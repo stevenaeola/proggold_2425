@@ -99,7 +99,7 @@ Yes, to get full marks you need to have detailed testing of every GET and POST m
 
 ### How do you test if it works on another machine?
 
-The main reasons for it not to work on another machine are if you use absolute paths, or use a back (Windows) or forward (Mac/Linx) to separate directories in the path. `__dirname__` is your friend, and use [path.sep](https://nodejs.org/api/path.html#pathsep) and [path.join](https://nodejs.org/api/path.html#pathjoinpaths). You can always use a CIS lab machine to test whether it works on another machine. Many are dual-boot so you can try out Windows and Linux.
+The main reasons for it not to work on another machine are if you use absolute paths, or use a back (Windows) or forward (Mac/Linux) to separate directories in the path. `__dirname__` is your friend, and use [path.sep](https://nodejs.org/api/path.html#pathsep) and [path.join](https://nodejs.org/api/path.html#pathjoinpaths). You can always use a CIS lab machine to test whether it works on another machine. Many are dual-boot so you can try out Windows and Linux.
 
 ### Are we allowed to use an API documentation generator like Postman or must we create our own documentation from scratch?
 
