@@ -67,4 +67,15 @@ app.post("/coffee/add", function(req, res){
   res.status(200).send(message)
 })
 
+app.post("/user/is_admin", function(req,res){
+  let username = req.body.username;
+  /// admin username includes !
+  if (username.lastIndexOf("!")>=0){
+    res.sendStatus(200);
+  }
+  else {
+    res.sendStatus(403);
+  }
+})
+
 module.exports = app;

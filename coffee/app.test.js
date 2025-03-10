@@ -43,4 +43,20 @@ describe('Test the coffee service', () => {
         .send(params)
 	    .expect(400);
     });
+
+    test("POST user/is_admin identifies admin", () => {
+        const params = {"username": "abcdf12!"}
+        return request(app)
+        .post('/user/is_admin')
+        .send(params)
+	    .expect(200);
+    })
+
+    test("POST user/is_admin identifies non-admin", () => {
+        const params = {"username": "abcdf12"}
+        return request(app)
+        .post('/user/is_admin')
+        .send(params)
+	    .expect(403);
+    })
 });
