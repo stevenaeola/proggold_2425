@@ -17,6 +17,12 @@ add_form.addEventListener('submit',  async function(event){
                 });
             const status = response.status;
             alert("Status was " + status)
+            if(status == "200"){
+                window.location.replace('admin.html');
+            }
+            else{
+                window.location.replace('user.html');
+            }
         }
     catch(e){
         alert(e)
