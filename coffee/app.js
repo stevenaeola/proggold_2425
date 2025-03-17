@@ -1,13 +1,14 @@
 const express = require('express')
 const app = express()
 
-const COFFEE_JSON = "./coffees.json"
+const COFFEE_JSON = "./coffee_data.json"
 const fs = require('fs');
 
 app.use(express.static('client'))
 app.use(express.json())
 
-let coffees = require(COFFEE_JSON)
+let coffee_data = require(COFFEE_JSON)
+let coffees = coffee_data.coffees
 
 app.get('/', function(req, resp){
   resp.send('Hello world')
