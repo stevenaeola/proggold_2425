@@ -1,0 +1,105 @@
+{
+    "coffees": [
+    {
+        "name": "filtered coffee",
+        "strength": 2,
+        "groundSize": 8
+    },
+    {
+        "name": "americano",
+        "strength": 4
+    },
+    {
+        "name": "latte"
+    },
+    {
+        "name": "espresso",
+        "brewing_method": "Pressure-brewed",
+        "taste": "Strong, rich, intense",
+        "serving_size": "1 oz (30 ml)",
+        "caffeine_content": "High"
+    },
+    {
+        "name": "flat white"
+    },
+    {
+        "name": "cappuccino"
+    },
+    {
+        "name": "machiato",
+        "taste": "sweet",
+        "strength": "1"
+    },
+    {
+        "name": "macha",
+        "taste": "sweet and grassy",
+        "strength": "2"
+    },
+    {
+        "name": "Testy coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "hotchoc",
+        "taste": "sweet",
+        "strength": "1"
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "hickory",
+        "taste": "Dust and soil",
+        "strength": "-1"
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "dfgh",
+        "taste": "zdfvd",
+        "strength": "6"
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    },
+    {
+        "name": "testy_coffee",
+        "taste": "Very testy",
+        "strength": -2
+    }
+],
+"shops": []
+}

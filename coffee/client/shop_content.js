@@ -1,30 +1,27 @@
-const search_button = document.getElementById("extract_data")
 
-const search_form = document.getElementById('search_form')
-search_form.addEventListener('keyup',  async function(event){
-    event.preventDefault()
+window.addEventListener('load',  async function(event){
 
-    let input_elt = document.getElementById('search_term')
-    let search_term = input_elt.value
-    let url = "http://127.0.0.1:8090/coffee/search?search_term=" + search_term
+    let url = "http://127.0.0.1:8090/shop/all"
     let response = await fetch(url)
     let body = await response.text();
     let results = JSON.parse(body)
-    let results_list = document.getElementById('search_results')
+    let results_list = document.getElementById('shop_content')
     results_list.innerHTML = ""
     for(let result of results){
         results_list.innerHTML += 
-        `<li><a href='/coffee/details/${result.name}'>${result.name}</a> </li>`
+        `<li><a href='/shop/details/${result.shop_id}'>${result.name}</a> </li>`
     }
-    let links = document.querySelectorAll("#search_results > li > a")
+    let links = document.querySelectorAll("#shop_content > li > a")
     for(let link of links){
         link.addEventListener('click', async function(event){
             event.preventDefault()
             let request_url = event.target.getAttribute("href")
             let response = await fetch(request_url)
             let body = await response.text()
-            let coffee = JSON.parse(body)
-            const details_results = document.getElementById("detail_results")
+            let shop = JSON.parse(body)
+            console.log("recovered", shop)
+            return
+//            const details_results = document.getElementById("detail_results")
             // card code from https://getbootstrap.com/docs/4.0/components/card/
             details_results.innerHTML = 
             `

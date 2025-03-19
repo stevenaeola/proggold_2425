@@ -9,6 +9,13 @@ app.use(express.json())
 
 let coffee_data = require(COFFEE_JSON)
 let coffees = coffee_data.coffees
+let shops = coffee_data.shops
+
+function saveCoffeeData(){
+  let coffee_data = {"coffees": coffees, "shops": shops}
+  let data = JSON.stringify(coffee_data, null, 2)
+  fs.writeFileSync(COFFEE_JSON, data);
+}
 
 app.get('/', function(req, resp){
   resp.send('Hello world')
@@ -62,10 +69,13 @@ app.post("/coffee/add", function(req, res){
     return;
   }
   coffees.push(coffee)
-  let data = JSON.stringify(coffees)
-  fs.writeFileSync(COFFEE_JSON, data);
+  saveCoffeeData();
   let message = {"msg": `Successfully added ${coffee.name}`}
   res.status(200).send(message)
+})
+
+app.get("/shop/all", function(req, res){
+  res.send(shops)
 })
 
 app.post("/user/is_admin", function(req,res){
